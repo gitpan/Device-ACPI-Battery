@@ -3,7 +3,7 @@ package Device::ACPI::Battery;
 use Moose;
 use Carp;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 has 'path' => (
     is => 'rw',
@@ -146,7 +146,7 @@ Device::ACPI::Battery - Retrieve information about your ACPI managed battery on 
 
     use Device::ACPI::Battery;
     
-    #default path is '/proc/acpi/battery/BAT0', set on construction or with $self->path
+    # default path is '/proc/acpi/battery/BAT0', changeable on construction or with $self->path
 
     my $battery = Device::ACPI::Battery->new( path => '/proc/acpi/battery/BAT1');
     
@@ -177,7 +177,7 @@ This module is used to collect information about batteries managed by ACPI on Li
 
 =head1 AUTHORS
 
-Aesop <aesop@cpan.org>
+aesop <aesop@cpan.org>
 
 =head1 COPYRIGHT
 
