@@ -1,0 +1,6 @@
+lib/Device/ACPI/Battery.pm
+Makefile.PL
+MANIFEST
+README
+LICENSE
+t/battery.t
