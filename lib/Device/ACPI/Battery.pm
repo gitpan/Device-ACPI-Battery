@@ -3,7 +3,7 @@ package Device::ACPI::Battery;
 use Moose;
 use Carp;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 has 'path' => (
     is => 'rw',
@@ -173,7 +173,7 @@ Device::ACPI::Battery - Retrieve information about your ACPI managed battery on 
     
 =head1 DESCRIPTION
 
-This module is used to collect information about batteries managed by ACPI on Linux, by scraping the files found under /proc/acpi/battery/. Useful for tasks such as displaying battery status in terminal (what I use it for).
+This module is used to collect information about batteries managed by ACPI on Linux, by scraping the files found under /proc/acpi/battery/. Useful for tasks such as displaying battery status in terminal (what I use it for). Proper use of this module requires that your kernel has ACPI installed and is used to manage your battery, so please check your list of installed kernel modules (/proc/modules, look for 'battery') before attempting to use. An easy way to find out is by checking if /proc/acpi/battery exists and if it has any subdirectories named similar to the default path specified above. If so, set $self->path to that full path.
 
 =head1 AUTHORS
 

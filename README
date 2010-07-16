@@ -3,11 +3,12 @@ Device-ACPI-Battery
 
 ABOUT
 
-This module is used to collect information about batteries managed with ACPI by scraping the files found under /proc/acpi/battery/. Useful for tasks such as displaying battery status in terminal (what I use it for).
+This module is used to collect information about batteries managed with ACPI by scraping the files found under 
+/proc/acpi/battery/. Useful for tasks such as displaying battery status in terminal (what I use it for).
 
 PREREQUISITES
 
-Proper use of this module requires that your kernel has ACPI installed and is used to manage your battery. Check your list of installed kernel modules before attempting to use.
+Proper use of this module requires that your kernel has ACPI installed and is used to manage your battery, so please check your list of installed kernel modules (/proc/modules, look for 'battery') before attempting to use. An easy way to find out is by checking if /proc/acpi/battery exists and if it has any subdirectories similar to the default path specified above. If so, set $self->path to that full path.
 
 INSTALLATION
 
